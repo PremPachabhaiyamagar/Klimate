@@ -20,8 +20,8 @@ const CurrentWeather = ({ data, locationName }: currentWeatherProps) => {
           <div className="grid gap-6 md:grid-cols-2">
             <div className="space-y-4">
               <div className="space-y-2">
-                <div className="flex items-center">
-                  <h2 className="text-2xl font-bold tracking-tighter">
+                <div className="flex items-end gap-1">
+                  <h2 className="text-2xl font-bold tracking-tight">
                     {locationName?.name}
                   </h2>
 
@@ -32,7 +32,7 @@ const CurrentWeather = ({ data, locationName }: currentWeatherProps) => {
                   )}
                 </div>
 
-                <p className=" text-sm text-muted-foreground">
+                <p className="text-sm text-muted-foreground">
                   {locationName?.country}
                 </p>
               </div>

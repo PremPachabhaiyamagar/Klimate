@@ -108,12 +108,12 @@ const DashBoard = () => {
       </div>
 
       <div className="grid gap-6">
-        <div>
+        <div className="flex flex-col lg:flex-row gap-4">
           <CurrentWeather
             data={weatherQuery.data}
             locationName={locationName}
           />
-          <HourlyTemperature />
+          <HourlyTemperature data={forcastQuery.data} />
         </div>
         <div>
           {/* details  */}
