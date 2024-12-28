@@ -10,6 +10,7 @@ import { AlertTriangle, MapPin, RefreshCw } from "lucide-react";
 import { WeatherSkeleton } from "@/components/WeatherSkeleton";
 import CurrentWeather from "@/components/CurrentWeather";
 import HourlyTemperature from "@/components/HourlyTemperature";
+import WeatherDetails from "@/components/WeatherDetails";
 
 const DashBoard = () => {
   const {
@@ -116,7 +117,7 @@ const DashBoard = () => {
           <HourlyTemperature data={forcastQuery.data} />
         </div>
         <div>
-          {/* details  */}
+          <WeatherDetails data={weatherQuery.data} />
           {/* forcasts */}
         </div>
       </div>
