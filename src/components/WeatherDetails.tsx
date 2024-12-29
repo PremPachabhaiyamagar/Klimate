@@ -7,7 +7,6 @@ interface WeatherDetailsprops {
   data: WeatherData;
 }
 const WeatherDetails = ({ data }: WeatherDetailsprops) => {
-  console.log(data);
   const { sys, wind, main } = data;
 
   const getWindDirection = (degree: number) => {

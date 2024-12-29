@@ -11,6 +11,7 @@ import { WeatherSkeleton } from "@/components/WeatherSkeleton";
 import CurrentWeather from "@/components/CurrentWeather";
 import HourlyTemperature from "@/components/HourlyTemperature";
 import WeatherDetails from "@/components/WeatherDetails";
+import WeatherForcast from "@/components/WeatherForcast";
 
 const DashBoard = () => {
   const {
@@ -110,15 +111,19 @@ const DashBoard = () => {
 
       <div className="grid gap-6">
         <div className="flex flex-col lg:flex-row gap-4">
+          {/* Current Weather */}
           <CurrentWeather
             data={weatherQuery.data}
             locationName={locationName}
           />
+          {/* Hourly Temprature */}
           <HourlyTemperature data={forcastQuery.data} />
         </div>
-        <div>
+        <div className="grid gap-6 md:grid-cols-2 items-start">
+          {/* Details */}
           <WeatherDetails data={weatherQuery.data} />
           {/* forcasts */}
+          <WeatherForcast data={forcastQuery.data} />
         </div>
       </div>
     </div>
